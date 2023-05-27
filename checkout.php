@@ -28,7 +28,8 @@
                     <input type="number" id="ph" name="phone" pattern="\d{10}" maxlength="10" required/>
                     <label>Contact number</label>
                 </div>
-               
+                
+                <input type="hidden" name="price" value="<?php echo (int)$_GET['price'] ?>">
                
                
                     
@@ -36,11 +37,13 @@
                 <script
                 src="https://checkout.stripe.com/checkout.js" class="stripe-button"
                 data-key="pk_test_51N9pLtFm1dxI5Ce5NFBqMnzFamDhBBi0QxkTYbYO8nY35BFhtR05WGSnquztSy1DK3VTpHb744xuQxpgi1SuUMCI008ffahKAk"
-                data-amount=<?php echo str_replace(",","",$_GET["price"]) * 100?>
-                data-name="<?php echo $_GET["item_name"]?>"
-                data-description="<?php echo $_GET["item_name"]?>"
-                data-image="<?php echo $_GET["image"]?>"
-                data-currency="inr"
+                data-amount="<?php echo ((int)$_GET['price']*100)?>"
+                data-name=""
+                
+              
+                
+                
+                data-currency="bdt"
                 data-locale="auto">
                 </script>
             </form>

@@ -72,9 +72,11 @@
                     <a href="./orderconfirmation.php?id=<?php echo $_GET['id'];?>" 
                         class="btn btn-primary" style="font-size: 20px; background-color:#58aa3a"> 
                         Buy Now offline </a>
-                        <a href="./checkout.php" 
+                        <a href="./checkout.php?price=<?php echo $row['price'] ?>"
                         class="btn btn-primary" style="font-size: 20px; background-color:#58aa3a"> 
                         Buy Now online </a>
+                        <?php
+                        ?>
             </div>
 
         </div>
